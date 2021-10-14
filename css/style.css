@@ -7,9 +7,63 @@
     --color-grey: #A5A5A5;
     --color-light-grey: #F7F7F7;
     --color-white: #FFFFFF;
+    --font-raleway: "Raleway", sans-serif;
+    --font-open-sans: "Open Sans", sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .container{
     width: 1352px;
     margin: 0 auto;
+}
+
+header {
+    box-shadow: 0px 3px 6px #00000029;
+}
+.logo {
+    font-family: "Raleway", sans-serif;
+    color: var(--color-primary);
+    font-size: 32px;
+    padding: 16px 0;
+}
+
+.header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+nav {
+    width: 40%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+nav ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "OpenSans", sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    color: var(--color-grey);
+    letter-spacing: 3.28px;
+    padding: 28px 0;
+}
+nav ul li a:hover {
+    color: var(--color-black);
+}
+nav ul li {
+    padding: 28px 0;
+}
+
+nav ul li:hover {
+    border-bottom: 4px solid var(--color-primary);
+
 }
