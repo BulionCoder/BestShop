@@ -133,14 +133,28 @@ nav ul li:hover {
 
 .cta {
     background-color: var(--color-primary);
-    box-shadow: 5px 10px 14px #07ACE629;
-    border-radius: 40px;
+    box-shadow: 5px 10px 14px var(--color-primary-shadow);
+    border-radius: px;
     padding: 22px 157px;
     font-family: "OpenSans", sans-serif;
     font-weight: 700;
     font-size: 16px;
     color: var(--color-white);
     text-decoration: none;
+}
+
+.btn__send {
+    background-color: var(--color-primary);
+    box-shadow: 5px 10px 14px #07ace629;
+    border-radius: 35px;
+    padding: 20px 97px;
+    font-family: "OpenSans", sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--color-white);
+    text-decoration: none;
+    margin: 20px 0;
+    border: none;
 }
 
 .section__label, .benefit__label {
@@ -453,15 +467,13 @@ nav ul li:hover {
 
 .contains:before {
     content: "";
-    background: url("../assets/Checkmark.svg");
+    background: url("../assets/Checkmark.svg") no-repeat center;
+    background-size: 9px 9px;
     border: 1px solid var(--color-green);
     color: var(--color-green);
     border-radius: 2px;
     width: 11px;
     height: 11px;
-    /*font-family: "Raleway", sans-serif;*/
-    /*font-weight: 700;*/
-    /*font-size: 9px;*/
     display: flex;
     align-items: center;
     justify-content: center;
@@ -504,6 +516,141 @@ nav ul li:hover {
     font-size: 12px;
     font-weight: 700;
     height: 20px;
+}
+
+.contact__header {
+    font-family: var(--font-raleway);
+    font-size: 49px;
+    font-weight: 400;
+    mmargin: 0 0 20px 0;
+}
+.contact__description {
+    font-family: var(--font-open-sans);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.contact__data {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+.email {
+    display: flex;
+}
+.email a, .phone {
+    text-decoration: none;
+    color: var(--color-grey);
+    font-family: var(--font-open-sans);
+    font-weight: 600;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.email:before, .phone:before {
+    content: "";
+    background-size: 25px 25px;
+    width: 27px;
+    height: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+}
+
+.email:before {
+    background: url("../assets/Mail Icon.svg") no-repeat center;
+}
+
+.phone:before {
+    background: url("../assets/Phone Icon.svg") no-repeat center;
+}
+
+.contact__wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.contact__right {
+    width: 40%;
+}
+
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+form label {
+    color: var(--color-primary);
+    font-family: var(--font-open-sans), sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 3px;
+}
+
+.checkbox {
+    text-transform: none;
+    font-weight: 400;
+    letter-spacing: normal;
+    font-size: 12px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    outline: none;
+    min-width: 440px;
+    border: 1px solid transparent;
+    border-bottom: 1px solid var(--color-grey);
+    padding: 8px 12px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-bottom: 1px solid var(--color-primary);
+}
+
+.checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkbox {
+    max-width: 444px;
+    cursor: pointer;
+    display: flex;
+    font-family: var(--font-open-sans), sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    color: #707070;
+    line-height: 12px;
+}
+
+.checkbox span {
+    border: 1px solid var(--color-grey);
+    border-radius: 4px;
+    height: 24px;
+    flex-shrink: 0;
+    flex-basis: 24px;
+    cursor: pointer;
+    margin-right: 15px;
+}
+.checkbox input:checked + span {
+    background: url("../assets/Checkmark.svg") no-repeat center;
 }
 
 footer {
