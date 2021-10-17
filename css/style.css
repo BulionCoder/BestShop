@@ -93,23 +93,27 @@ nav ul li:hover {
 }
 
 .banner {
-    min-height: 80vh;
+    min-height: 90vh;
     position: relative;
 }
 
 .banner__intro {
     display: flex;
     text-align: center;
-    margin-top: 15vh;
     flex-direction: column;
     align-items: center;
     text-decoration: none;
+    position: absolute;
+    bottom: 65vh;
+    left: calc(50% - 220px);
+    max-width: 440px;
+    z-index: 2;
 }
 
 .banner__background {
     background: url(../assets/Background.png) no-repeat center/cover;
     width: 100%;
-    min-height: 60vh;
+    min-height: 70vh;
     align-items: center;
     justify-content: center;
     position: absolute;
@@ -134,7 +138,7 @@ nav ul li:hover {
 .cta {
     background-color: var(--color-primary);
     box-shadow: 5px 10px 14px var(--color-primary-shadow);
-    border-radius: px;
+    border-radius: 40px;
     padding: 22px 157px;
     font-family: "OpenSans", sans-serif;
     font-weight: 700;
@@ -155,6 +159,7 @@ nav ul li:hover {
     text-decoration: none;
     margin: 20px 0;
     border: none;
+    align-self: flex-end;
 }
 
 .section__label, .benefit__label {
@@ -170,8 +175,8 @@ nav ul li:hover {
 }
 
 
-.statistics, .benefits, .pricing, .pricing__wrapper {
-    padding: 10vh 0;
+.banner, under__banner, .statistics, .benefits, .pricing, .pricing__wrapper, .contact {
+    margin: 10vh 0;
 }
 .statistic {
     display: flex;
@@ -234,6 +239,7 @@ nav ul li:hover {
 
 .benefits {
     background-color: var(--color-light-grey);
+    padding: 10vh 0;
 }
 
 .benefit__order__1 {
@@ -242,12 +248,17 @@ nav ul li:hover {
 
 .benefit {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     background-color: white;
     padding: 50px;
     margin: 5vh 0;
+    border-radius: 5px;
     flex-wrap: wrap;
+}
+
+.benefit:nth-child(2) h2 {
+    margin-top: 50px;
 }
 
 .benefit:nth-child(1), .benefit:nth-child(3) {
@@ -256,7 +267,7 @@ nav ul li:hover {
 
 .benefit:last-child {
     background-color: transparent;
-    padding: 50px 0;
+    padding: 0;
     border-radius: 5px;
 }
 
@@ -270,7 +281,13 @@ nav ul li:hover {
     background-color: white;
     padding: 50px;
     height: 370px;
+    border-radius: 5px;
+    margin: 0;
 }
+.benefit:last-child .benefit__right {
+    margin: 0;
+}
+
 .benefit__left {
     margin: 50px 0;
     width: 50%;
@@ -389,7 +406,7 @@ nav ul li:hover {
 
 .price__type {
     border-radius: 18px;
-    padding: 34px 34px 73px 34px;
+    padding: 35px 70px 70px 70px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -408,7 +425,7 @@ nav ul li:hover {
     font-family: "Open Sans", sans-serif;
     font-size: 46px;
     font-weight: 300;
-    margin: 66px 0 14px 0;
+    margin: 14px 0 14px 0;
 }
 
 .price__color__redish {
@@ -449,11 +466,11 @@ nav ul li:hover {
 .price__border__color__primary {
     border: 1px solid var(--color-primary);
     box-shadow: 5px 10px 27px var(--color-primary);
-    /*flex-grow: 1;*/
+    /* flex-grow: 1; */
     margin-left: 58px;
     margin-right: 58px;
-    height: 65vh;
-    padding: 34px 64px 73px 64px;
+    /* height: 65vh; */
+    padding: 35px 70px 70px 70px;
 }
 
 .contains, .do-not-contains {
@@ -517,12 +534,14 @@ nav ul li:hover {
     font-weight: 700;
     height: 20px;
 }
-
+.professional__wrapper {
+    margin: 50px;
+}
 .contact__header {
     font-family: var(--font-raleway);
     font-size: 49px;
     font-weight: 400;
-    mmargin: 0 0 20px 0;
+    margin: 0 0 20px 0;
 }
 .contact__description {
     font-family: var(--font-open-sans);
@@ -535,7 +554,9 @@ nav ul li:hover {
     align-items: center;
     justify-content: space-between;
     margin: 20px 0;
+    flex-wrap: wrap;
 }
+
 .email {
     display: flex;
 }
@@ -571,18 +592,19 @@ nav ul li:hover {
 .contact__wrapper {
     display: flex;
     align-items: flex-start;
+    flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
 .contact__right {
-    width: 40%;
+    /*width: 40%;*/
 }
 
 .contact__form {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-end;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 form label {
@@ -592,20 +614,32 @@ form label {
     text-transform: uppercase;
     font-size: 15px;
     letter-spacing: 3px;
+    display: flex;
+    flex-direction: column;
 }
 
 .checkbox {
-    text-transform: none;
+    max-width: 444px;
+    cursor: pointer;
+    display: flex;
+    font-family: var(--font-open-sans), sans-serif;
     font-weight: 400;
+    font-size: 10px;
+    color: #707070;
+    line-height: 12px;
+    flex-direction: row;
+    text-transform: none;
     letter-spacing: normal;
-    font-size: 12px;
-}
 
+}
+.contact__left, .contact__right {
+    margin-top: 50px;
+}
 input[type="text"],
 input[type="email"],
 textarea {
     outline: none;
-    min-width: 440px;
+    min-width: 444px;
     border: 1px solid transparent;
     border-bottom: 1px solid var(--color-grey);
     padding: 8px 12px;
