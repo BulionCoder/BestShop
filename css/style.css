@@ -68,6 +68,7 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 nav ul li a {
     text-decoration: none;
@@ -106,7 +107,7 @@ nav ul li:hover {
     position: absolute;
     bottom: 65vh;
     left: calc(50% - 220px);
-    max-width: 440px;
+    width: 440px;
     z-index: 2;
 }
 
@@ -248,7 +249,7 @@ nav ul li:hover {
 
 .benefit {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     background-color: white;
     padding: 50px;
@@ -269,6 +270,7 @@ nav ul li:hover {
     background-color: transparent;
     padding: 0;
     border-radius: 5px;
+    justify-content: space-between;
 }
 
 
@@ -639,7 +641,7 @@ input[type="text"],
 input[type="email"],
 textarea {
     outline: none;
-    min-width: 444px;
+    min-width: 440px;
     border: 1px solid transparent;
     border-bottom: 1px solid var(--color-grey);
     padding: 8px 12px;
@@ -664,7 +666,7 @@ textarea:focus {
 }
 
 .checkbox {
-    max-width: 444px;
+    min-width: 440px;
     cursor: pointer;
     display: flex;
     font-family: var(--font-open-sans), sans-serif;
