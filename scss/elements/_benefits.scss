@@ -1,0 +1,159 @@
+.benefits {
+  background-color: $color-light-grey;
+  padding: 10vh 0;
+}
+
+.benefit__order__1 {
+  order: 1;
+}
+
+.benefit {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  padding: 50px;
+  margin: 5vh 0;
+  border-radius: 5px;
+  flex-wrap: wrap;
+}
+
+.benefit:nth-child(2) h2 {
+  margin-top: 50px;
+}
+
+.benefit:nth-child(1), .benefit:nth-child(3) {
+  flex-wrap: wrap-reverse;
+}
+
+.benefit:last-child {
+  background-color: transparent;
+  padding: 0;
+  border-radius: 5px;
+  justify-content: space-between;
+}
+
+
+.benefit__right {
+  margin: 50px 0;
+  /*width: 40%;*/
+}
+
+.benefit:last-child .benefit__left {
+  background-color: white;
+  padding: 50px;
+  height: 370px;
+  border-radius: 5px;
+  margin: 0;
+}
+.benefit:last-child .benefit__right {
+  margin: 0;
+}
+
+.benefit__left {
+  margin: 50px 0;
+  width: 50%;
+}
+
+.benefit__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /*width: 40%;*/
+  /*margin: 50px;*/
+}
+.benefit--description__redish, .benefit--description__primary, .benefit--description__green {
+  margin: 30px 0;
+  //font-family: "OpenSans", sans-serif;
+  //font-weight: 400;
+  //font-size: 16px;
+  @include webFont($font-open-sans, 1rem, 400, $color-black);
+  position: relative;
+}
+
+
+.benefit--description__redish:after, .benefit--description__primary:after, .benefit--description__green:after   {
+  content: "";
+  height: 4px;
+  width: 75%;
+  position: absolute;
+  left: 0;
+  bottom: -50px;
+}
+.benefit--description__redish:after {
+  background-color: $color-redish;
+}
+
+.benefit--description__primary:after {
+  background-color: $color-primary;
+}
+
+.benefit--description__green:after {
+  background-color: $color-green;
+}
+
+.benefit--graphic {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  order: 1;
+}
+
+.benefit--graphic__trumpet {
+  display: flex;
+  align-items: flex-end;
+}
+
+.benefit--image {
+  width: 386px;
+  height: 219px;
+  position: relative;
+  z-index: 2;
+}
+
+.benefit--image__iPhone {
+  width: 400px;
+  height: auto;
+  position: absolute;
+  z-index: 2;
+  left: 20px;
+}
+
+.benefit--image__trumpet {
+  width: auto;
+  height: 208px;
+  z-index: 2;
+  position: absolute;
+}
+
+.benefit--shape {
+  width: 155px;
+  height: 155px;
+  transform: rotate(45deg);
+  background-color: $color-redish;
+  border-radius: 41px;
+  position: absolute;
+  top: calc(50% - 155px);
+  left: calc(100% - 155px);
+}
+
+.benefit--shape__circle {
+  width: 320px;
+  height: 320px;
+  background-color: $color-primary;
+  border-radius: 50%;
+  position: relative;
+}
+
+.benefit--shape__square {
+  width: 440px;
+  height: 370px;
+  background-color: $color-green;
+  border-radius: 5px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

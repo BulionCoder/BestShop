@@ -1,2 +1,16 @@
-@import "reset";
-@import "style";
+@import "generic/reset";
+@import "settings/fonts";
+@import "settings/colors";
+@import "settings/mixins";
+//@import "settings";
+
+
+@import "elements/all";
+@import "elements/top-navigation";
+@import "elements/banner";
+@import "elements/statistics";
+@import "elements/benefits";
+@import "elements/pricing";
+@import "elements/contact";
+@import "elements/footer";
+

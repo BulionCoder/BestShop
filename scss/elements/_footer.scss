@@ -1,0 +1,18 @@
+footer {
+  box-shadow: 0px -5px 40px #00000029;
+}
+
+.footer__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.facebook {
+  margin-left: 10px;
+}
+
+.copyright {
+  @include webFont($font-open-sans, 11px, 400, $color-grey);
+  padding-bottom: 17px;
+}

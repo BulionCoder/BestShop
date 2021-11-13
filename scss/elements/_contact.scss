@@ -1,0 +1,130 @@
+.contact__header {
+  @include webFont($font-raleway, 3rem, 400, $color-black);
+  margin: 0 0 20px 0;
+}
+.contact__description {
+  @include webFont($font-open-sans, 1rem, 400, $color-black);
+}
+
+.contact__data {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.email {
+  display: flex;
+}
+.email a, .phone {
+  @include webFont($font-open-sans, 1rem, 600, $color-grey);
+  display: flex;
+  align-items: center;
+}
+
+.email:before, .phone:before {
+  content: "";
+  background-size: 25px 25px;
+  width: 27px;
+  height: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5px;
+}
+
+.email:before {
+  background: url("../../assets/Mail Icon.svg") no-repeat center;
+}
+
+.phone:before {
+  background: url("../../assets/Phone Icon.svg") no-repeat center;
+}
+
+.contact__wrapper {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.contact__right {
+  /*width: 40%;*/
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+form label {
+  @include webFont($font-open-sans, 1rem, 700, $color-primary);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  display: flex;
+  flex-direction: column;
+}
+
+.checkbox {
+  @include webFont($font-open-sans, 10px, 400, $color-grey);
+  max-width: 444px;
+  cursor: pointer;
+  display: flex;
+  line-height: 12px;
+  flex-direction: row;
+  text-transform: none;
+  letter-spacing: normal;
+
+}
+.contact__left, .contact__right {
+  margin-top: 50px;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+  @include webFont($font-open-sans, 1rem, 400, $color-black);
+  outline: none;
+  min-width: 440px;
+  border: 1px solid transparent;
+  border-bottom: 1px solid $color-grey;
+  padding: 8px 12px;
+  margin-bottom: 20px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-bottom: 1px solid $color-primary;
+}
+
+.checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox {
+  min-width: 440px;
+  cursor: pointer;
+  display: flex;
+  @include webFont($font-open-sans, 10px, 400, $color-grey);
+  line-height: 12px;
+}
+
+.checkbox span {
+  border: 1px solid $color-grey;
+  border-radius: 4px;
+  height: 24px;
+  flex-shrink: 0;
+  flex-basis: 24px;
+  cursor: pointer;
+  margin-right: 15px;
+}
+.checkbox input:checked + span {
+  background: url("../../assets/Checkmark.svg") no-repeat center;
+}

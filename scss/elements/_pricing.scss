@@ -1,0 +1,130 @@
+.pricing__wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.price--type {
+  border-radius: 18px;
+  padding: 35px 70px 70px 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+
+.price--type--name {
+  @include webFont($font-raleway, 20px, 800, $color-black);
+}
+
+.price--type--cost {
+  @include webFont($font-open-sans, 46px, 300, $color-black);
+  margin: 14px 0 14px 0;
+}
+
+.price__button {
+  @include webFont($font-open-sans, 13px, 700, $color-white);
+  @include btn(medium, $color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: -25px;
+}
+
+.price__color__redish {
+  color: $color-redish;
+}
+
+.price__color__green {
+  color: $color-green;
+}
+
+.price__color__primary {
+  color: $color-primary;
+}
+
+.price__backgroundcolor__redish {
+  background-color: $color-redish;
+}
+
+.price__backgroundcolor__green {
+  background-color: $color-green;
+}
+
+.price__backgroundcolor__primary {
+  background-color: $color-primary;
+}
+
+
+.price__border__color__redish {
+  border:  1px solid $color-redish;
+  /*flex-grow: 0;*/
+}
+
+.price__border__color__green {
+  border:  1px solid $color-green;
+  /*flex-grow: 0;*/
+}
+
+.price__border__color__primary {
+  border: 1px solid $color-primary;
+  box-shadow: 5px 10px 27px $color-primary;
+  /* flex-grow: 1; */
+  margin-left: 58px;
+  margin-right: 58px;
+  /* height: 65vh; */
+  padding: 35px 70px 70px 70px;
+}
+
+.contains, .do-not-contains {
+  font-family: "OpenSans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  margin: 25px 0 0 0;
+}
+
+.contains:before {
+  content: "";
+  background: url("../../assets/Checkmark.svg") no-repeat center;
+  background-size: 9px 9px;
+  border: 1px solid $color-green;
+  color: $color-green;
+  border-radius: 2px;
+  width: 11px;
+  height: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5px;
+}
+
+.do-not-contains:before {
+  border: 1px solid $color-redish;
+  @include webFont($font-raleway, 9px, 700, $color-redish);
+  border-radius: 2px;
+  content: "x";
+  width: 11px;
+  height: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5px;
+}
+
+
+
+.limited-offer {
+  @include webFont($font-raleway, 12px, 700, $color-black);
+  height: 20px;
+}
+.professional__wrapper {
+  margin: 50px;
+}

@@ -1,0 +1,23 @@
+@import "fonts";
+@import "colors";
+
+@mixin webFont ($fontType: $font-open-sans, $fontSize: 1rem, $fontWeight: 300, $fontColor: $color-black) {
+  font-family: $fontType, sans-serif;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  color: $fontColor;
+  text-decoration: none;
+}
+
+@mixin btn ($btnSize, $btnColor:$color-primary) {
+  color: $color-white;
+  @if $btnSize == big {
+    border-radius: 35px;
+    padding: 23px 100px;
+  } @else if $btnSize == medium {
+    border-radius: 23px;
+    padding: 16px 50px;
+  }
+  background-color: $btnColor;
+  cursor: pointer;
+}

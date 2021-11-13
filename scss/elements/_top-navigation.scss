@@ -1,0 +1,48 @@
+header {
+  box-shadow: 0px 3px 6px #00000029;
+}
+
+.logo, .footer--logo {
+  @include webFont($font-raleway, 2rem, 300, $color-primary );
+  padding: 16px 0;
+}
+
+.footer--logo {
+  font-size: 1.5rem;
+}
+
+.header--wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+nav {
+  width: 40%;
+
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    li {
+      padding: 28px 0;
+      border-bottom: 4px solid transparent;
+      &:hover {
+        border-bottom: 4px solid $color-primary;
+      }
+    }
+
+    li a {
+      text-decoration: none;
+      text-transform: uppercase;
+      @include webFont($font-open-sans, 11px, 700, $color-grey);
+      letter-spacing: 3.28px;
+      padding: 28px 0;
+      &:hover {
+        color: $color-black;
+      }
+    }
+  }
+}
