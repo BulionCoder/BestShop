@@ -13,17 +13,34 @@
   align-items: center;
   background-color: white;
   padding: 50px;
-  margin: 5vh 0;
+  margin: 5%;
   border-radius: 5px;
-  flex-wrap: wrap;
+  //flex-wrap: wrap;
 }
 
-.benefit:nth-child(2) h2 {
-  margin-top: 50px;
+.benefit:nth-child(2), .benefit:nth-child(3) {
+  @include sm {
+    flex-wrap: wrap;
+  }
 }
 
-.benefit:nth-child(1), .benefit:nth-child(3) {
-  flex-wrap: wrap-reverse;
+.benefit:nth-child(2) {
+  h2 {
+    margin-top: 50px;
+  }
+  .benefit__text {
+    padding-left: 20px;
+    @include sm {
+      padding-left: 0;
+    }
+  }
+}
+
+
+.benefit:nth-child(1){
+  @include sm {
+    flex-wrap: wrap-reverse;
+  }
 }
 
 .benefit:last-child {
@@ -36,7 +53,7 @@
 
 .benefit__right {
   margin: 50px 0;
-  /*width: 40%;*/
+
 }
 
 .benefit:last-child .benefit__left {
@@ -48,25 +65,28 @@
 }
 .benefit:last-child .benefit__right {
   margin: 0;
+  width: 40%;
+  @include sm {
+    width: 100%;
+  }
 }
 
 .benefit__left {
   margin: 50px 0;
   width: 50%;
+  @include sm {
+    width: 100%;
+  }
 }
 
 .benefit__text {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  /*width: 40%;*/
-  /*margin: 50px;*/
+
 }
 .benefit--description__redish, .benefit--description__primary, .benefit--description__green {
   margin: 30px 0;
-  //font-family: "OpenSans", sans-serif;
-  //font-weight: 400;
-  //font-size: 16px;
   @include webFont($font-open-sans, 1rem, 400, $color-black);
   position: relative;
 }
@@ -76,6 +96,9 @@
   content: "";
   height: 4px;
   width: 75%;
+  @include sm {
+    width: 0;
+  }
   position: absolute;
   left: 0;
   bottom: -50px;
@@ -99,6 +122,9 @@
   align-items: center;
   flex-direction: row;
   order: 1;
+  @include xs {
+    transform: scaleX(0.75) scaleY(0.75);
+  }
 }
 
 .benefit--graphic__trumpet {
@@ -114,7 +140,7 @@
 }
 
 .benefit--image__iPhone {
-  width: 400px;
+  width: 300px;
   height: auto;
   position: absolute;
   z-index: 2;
@@ -140,15 +166,15 @@
 }
 
 .benefit--shape__circle {
-  width: 320px;
-  height: 320px;
+  width: 300px;
+  height: 300px;
   background-color: $color-primary;
   border-radius: 50%;
   position: relative;
 }
 
 .benefit--shape__square {
-  width: 440px;
+  width: 100%;
   height: 370px;
   background-color: $color-green;
   border-radius: 5px;
@@ -156,4 +182,5 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
 }

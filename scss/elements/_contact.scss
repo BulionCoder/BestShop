@@ -16,7 +16,9 @@
 
 .email {
   display: flex;
+  margin-bottom: 10px;
 }
+
 .email a, .phone {
   @include webFont($font-open-sans, 1rem, 600, $color-grey);
   display: flex;

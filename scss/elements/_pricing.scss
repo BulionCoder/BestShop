@@ -1,20 +1,21 @@
-.pricing__wrapper {
+.pricing--wrapper {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   text-align: center;
   flex-direction: row;
-  flex-wrap: wrap;
+  @include mm {
+    display: block;
+  }
 }
 
 .price--type {
   border-radius: 18px;
   padding: 35px 70px 70px 70px;
-  display: flex;
-  flex-direction: column;
   align-items: center;
   position: relative;
-  margin-bottom: 50px;
+  margin: 0 auto 50px auto;
+  width: fit-content;
 }
 
 
@@ -27,7 +28,7 @@
   margin: 14px 0 14px 0;
 }
 
-.price__button {
+.price--button {
   @include webFont($font-open-sans, 13px, 700, $color-white);
   @include btn(medium, $color-white);
   display: flex;
@@ -35,51 +36,53 @@
   justify-content: center;
   position: absolute;
   bottom: -25px;
+  left: calc(50% - 75px);
+  width: 150px;
 }
 
-.price__color__redish {
+.price--color__redish {
   color: $color-redish;
 }
 
-.price__color__green {
+.price--color__green {
   color: $color-green;
 }
 
-.price__color__primary {
+.price--color__primary {
   color: $color-primary;
 }
 
-.price__backgroundcolor__redish {
+.price--backgroundcolor__redish {
   background-color: $color-redish;
 }
 
-.price__backgroundcolor__green {
+.price--backgroundcolor__green {
   background-color: $color-green;
 }
 
-.price__backgroundcolor__primary {
+.price--backgroundcolor__primary {
   background-color: $color-primary;
 }
 
 
-.price__border__color__redish {
+.price--border--color__redish {
   border:  1px solid $color-redish;
   /*flex-grow: 0;*/
 }
 
-.price__border__color__green {
+.price--border--color__green {
   border:  1px solid $color-green;
   /*flex-grow: 0;*/
 }
 
-.price__border__color__primary {
+.price--border--color__primary {
   border: 1px solid $color-primary;
   box-shadow: 5px 10px 27px $color-primary;
   /* flex-grow: 1; */
-  margin-left: 58px;
-  margin-right: 58px;
+  //margin-left: 58px;
+  //margin-right: 58px;
   /* height: 65vh; */
-  padding: 35px 70px 70px 70px;
+  padding: 35px 60px 60px 70px;
 }
 
 .contains, .do-not-contains {
