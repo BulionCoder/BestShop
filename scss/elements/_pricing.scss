@@ -1,3 +1,9 @@
+@use "sass:color";
+@use "sass:list";
+
+$colorNamesList {"primary", "green", "redish"};
+
+
 .pricing--wrapper {
   display: flex;
   justify-content: space-evenly;
@@ -52,54 +58,29 @@
   width: 150px;
 }
 
-.price--color__redish {
-  color: $color-redish;
-}
 
-.price--color__green {
-  color: $color-green;
-}
-
-.price--color__primary {
-  color: $color-primary;
-}
-
-.price--backgroundcolor__redish {
-  background-color: $color-redish;
-}
-
-.price--backgroundcolor__green {
-  background-color: $color-green;
-}
-
-.price--backgroundcolor__primary {
-  background-color: $color-primary;
-}
-
-
-.price--border--color__redish {
-  border:  1px solid $color-redish;
-}
-
-.price--border--color__green {
-  border:  1px solid $color-green;
-}
-
-.price--border--color__primary {
-  border: 1px solid $color-primary;
-  box-shadow: 5px 10px 27px $color-primary;
-  padding: 35px 60px 60px 70px;
-}
-.price--border--color__primary, .price--border--color__green, .price--backgroundcolor__redish {
-  @include ss {
-    max-width: 340px;
+@each $colorName in $colorNamesList {
+  .price--color__#{$colorName} {
+    color: $color-#{$colorName};
+  }
+  .price--backgroundcolor__#{$colorName} {
+    background-color: $color-#{$colorName};
+  }
+  .price--border--color__#{$colorName} {
+    border:  1px solid $color-#{$colorName};
+    @include ss {
+      max-width: 340px;
+    }
   }
 }
 
+.price--border--color__primary {
+  box-shadow: 5px 10px 27px $color-primary;
+  padding: 35px 60px 60px 70px;
+}
+
 .contains, .do-not-contains {
-  font-family: "OpenSans", sans-serif;
-  font-size: 14px;
-  font-weight: 400;
+  @include webFont($font-open-sans, 14px, 400, $color-black);
   display: flex;
   align-items: center;
   margin: 25px 0 0 0;

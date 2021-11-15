@@ -58,18 +58,20 @@ nav {
 
 
 @include sm {
+  nav {
+    display: none;
+  }
   .menu {
-    //max-height: 0;
-    //transition: max-height .2s ease-out;
+    max-height: 0;
+    transition: max-height .2s ease-out;
     display: none;
     position: absolute;
     left: 15px;
     top: 70px;
     width: 100%;
-    background-color: white;
-    z-index: 3;
      li {
        padding: 14px 0;
+       background-color: white;
      }
   }
 
@@ -123,13 +125,17 @@ nav {
   .menu-btn:checked ~ .menu-icon .navicon:after {
     transform: rotate(45deg);
   }
-  .menu-btn:checked .menu {
-    display: block;
+  .menu-btn:checked ~ nav {
+      display: contents;
+    .menu {
+      display: block;
+      z-index: 3;
+    }
   }
+
   .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
   .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
     top: 0;
   }
-
 
 }
