@@ -1,8 +1,7 @@
 @use "sass:color";
 @use "sass:list";
 
-$colorNamesList {"primary", "green", "redish"};
-
+$colorNamesList: "primary", "green", "redish";
 
 .pricing--wrapper {
   display: flex;
@@ -61,18 +60,49 @@ $colorNamesList {"primary", "green", "redish"};
 
 @each $colorName in $colorNamesList {
   .price--color__#{$colorName} {
-    color: $color-#{$colorName};
+    //color: $color-#{$colorName};
+    @if $colorName == "primary" {
+      color: $color-primary
+    }@else if $colorName == "green" {
+      color: $color-green
+    }@else if $colorName == "redish" {
+      color: $color-redish
+    }
   }
   .price--backgroundcolor__#{$colorName} {
-    background-color: $color-#{$colorName};
+    //background-color: $color-#{$colorName}
+    @if $colorName == "primary" {
+      background-color: $color-primary
+    }@else if $colorName == "green" {
+      background-color: $color-green
+    }@else if $colorName == "redish" {
+      background-color: $color-redish
+    }
+    &:hover {
+      @if $colorName == "primary" {
+        background-color: color.scale($color-primary, $lightness: 25%);
+      }@else if $colorName == "green" {
+        background-color: color.scale($color-green, $lightness: 25%);
+      }@else if $colorName == "redish" {
+        background-color: color.scale($color-redish, $lightness: 25%);
+      }
+    }
   }
   .price--border--color__#{$colorName} {
-    border:  1px solid $color-#{$colorName};
+    //border:  1px solid $color-#{$colorName};
+    @if $colorName == "primary" {
+      border:  1px solid $color-primary
+    }@else if $colorName == "green" {
+      border:  1px solid $color-green
+    }@else if $colorName == "redish" {
+      border:  1px solid $color-redish
+    }
     @include ss {
       max-width: 340px;
     }
   }
 }
+
 
 .price--border--color__primary {
   box-shadow: 5px 10px 27px $color-primary;
