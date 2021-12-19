@@ -16,6 +16,8 @@ function compileSass(done) {
         .pipe(sourcemaps.write("."))
         .pipe(gulp.dest(entryPath + "/css"));
 
+    gulp.watch(entryPath + "/js/*.js", gulp.series(reload));
+
     done();
 }
 
