@@ -3,7 +3,7 @@
   "version": "2.0.0",
   "scripts": {
     "start": "gulp",
-    "build": "gulp sass"
+    "build": "gulp prod"
   },
   "devDependencies": {
     "browser-sync": "^2.27.5",

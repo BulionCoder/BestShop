@@ -21,6 +21,18 @@ function compileSass(done) {
     done();
 }
 
+function compileSassProp(done) {
+    gulp
+        .src(entryPath + "/scss/main.scss")
+        .pipe(sourcemaps.init())
+        .pipe(sass({ outputStyle: "expanded" }).on("error", sass.logError))
+        .pipe(autoprefixer())
+        .pipe(sourcemaps.write("."))
+        .pipe(gulp.dest(entryPath + "/css"));
+
+    done();
+}
+
 function watcher(done) {
     browserSync.init({
         server: "./" + entryPath,
@@ -39,4 +51,5 @@ function reload(done) {
 }
 
 exports.sass = gulp.parallel(compileSass);
+exports.prod = gulp.parallel(compileSassProp);
 exports.default = gulp.parallel(compileSass, watcher);
